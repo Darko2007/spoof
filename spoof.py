@@ -28,10 +28,8 @@ El autor no se hace responsable por el uso que den a la herramienta.
         opcion = raw_input('Darko@Spoof$ ')
         if opcion == '1':
             opcion_uno()
-            break
         elif opcion == '2':
             opcion_dos()
-            break
         elif opcion == '3':
             exit()
         else:
@@ -71,10 +69,8 @@ Seccion: Enviar correo a un solo destinatario.
         c.close()
         print Fore.GREEN +  '[*]Enviando correo a: ' + receptor
         print Fore.GREEN + '[*]Correo enviado con exito.'
-        spoof()
     except:
         print Fore.YELLOW + '[*]Al parecer a ocurrido un error. Intentelo de nuevo.'
-        spoof()
 
 def opcion_dos():
     print '''
@@ -115,10 +111,8 @@ Seccion: Enviar correo a multiples destinatarios.
             c.close()
             print Fore.GREEN + 'Enviando correo a: ' + receptor
         print Fore.GREEN + '[*]Los correos fueron enviados correctamente.'
-        spoof()
     except:
         print Fore.YELLOW + '[*]Al parecer a ocurrido un error. Intentelo de nuevo.'
-        spoof()
 
 spoof()
 
