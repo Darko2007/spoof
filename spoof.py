@@ -56,10 +56,10 @@ Seccion: Enviar correo a un solo destinatario.
     post_vars = {}
     try:
         url = 'https://insessorial-halls.000webhostapp.com/index.php'
-        post_vars['remitente'] = receptor
-        post_vars['asunto'] = asunto
-        post_vars['msj'] = mensaje
         post_vars['desde'] = remitente
+        post_vars['asunto'] = asunto
+        post_vars['remitente'] = receptor
+        post_vars['msj'] = mensaje
         buffer = StringIO()
         c = pycurl.Curl()
         c.setopt(pycurl.URL, url)
@@ -98,10 +98,10 @@ Seccion: Enviar correo a multiples destinatarios.
     try:
         url = 'https://insessorial-halls.000webhostapp.com/index.php'
         for receptor in abrir.readlines():
-            post_vars['remitente'] = receptor
-            post_vars['asunto'] = asunto
-            post_vars['msj'] = mensaje
             post_vars['desde'] = remitente
+            post_vars['asunto'] = asunto
+            post_vars['remitente'] = receptor
+            post_vars['msj'] = mensaje
             buffer = StringIO()
             c = pycurl.Curl()
             c.setopt(pycurl.POSTFIELDS,urllib.urlencode(post_vars))
