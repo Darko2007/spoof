@@ -55,7 +55,7 @@ Seccion: Enviar correo a un solo destinatario.
     mensaje = raw_input('Mensaje: ')
     post_vars = {}
     try:
-        url = 'https://insessorial-halls.000webhostapp.com/send.php'
+        url = 'https://insessorial-halls.000webhostapp.com/index.php'
         post_vars['remitente'] = receptor
         post_vars['asunto'] = asunto
         post_vars['msj'] = mensaje
@@ -96,7 +96,7 @@ Seccion: Enviar correo a multiples destinatarios.
     mensaje = raw_input('Mensaje: ')
     post_vars = {}
     try:
-        url = 'https://insessorial-halls.000webhostapp.com/send.php'
+        url = 'https://insessorial-halls.000webhostapp.com/index.php'
         for receptor in abrir.readlines():
             post_vars['remitente'] = receptor
             post_vars['asunto'] = asunto
